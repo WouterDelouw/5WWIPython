@@ -24,7 +24,7 @@ eurocent = eurocent % 2
 aantal_muntstukken += (eurocent // 1)
 eurocent = eurocent % 1
 
-print(aantal_muntstukken, eurocent)
+
 
 
 # uitvoer
