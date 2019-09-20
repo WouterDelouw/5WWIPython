@@ -1,1 +1,2 @@
-print(5 *str(float(12)))
+print(str(24/2)*5)
+
