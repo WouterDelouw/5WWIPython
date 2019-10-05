@@ -4,7 +4,7 @@ n = float(input('s: '))
 g_m = 32.06
 
 # berekeningen
-m = n *g_m
+m = n * g_m
 n_s = n * n_a
 
 # uitvoer
