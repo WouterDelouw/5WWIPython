@@ -7,6 +7,7 @@ dobbelsteen_1_v = int(input('aantal ogen dobbelsteen 1 verdediger : '))
 dobbelsteen_2_v = int(input('aantal ogen dobbelsteen 2 verdediger : '))
 
 # berekeningen: dobbelstenen op volgorde zetten
+# veeeeel beter: max(min(a1,a2), min(a1,a3), min(a2,a3))
 if dobbelsteen_1_a >= dobbelsteen_2_a and dobbelsteen_1_a >= dobbelsteen_3_a:
     grootste_ogen_aanvaller = dobbelsteen_1_a
     if dobbelsteen_2_a >= dobbelsteen_3_a:
