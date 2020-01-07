@@ -1,6 +1,7 @@
 x = int(input('geef een getal: '))
 deelbaar = 0
 nietdeelbaar = 0
+
 if x == 1:
     uitvoer = ('geen priemgetal')
 elif x == 2:
