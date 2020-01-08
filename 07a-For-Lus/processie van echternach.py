@@ -1,16 +1,12 @@
-# invoer
-t = int(input('geef aantal seconden: '))
-stappen_vooruit = 0
-stappen_achteruit = 0
+# invoes
+seconden = (int(input('geef aantal seconden: ')) + 1)
 aantal_stappen = 0
 # berekeningen
-for i in range(1, t+1):
-    if t % 2 != 0:
-        aantal_stappen += 2*i
+for i in range(seconden):
+    if (i % 2) != 0:
+        aantal_stappen += (i + 1)
     else:
-        aantal_stappen -= i
-
-aantal_stappen = stappen_vooruit - stappen_achteruit
+        aantal_stappen -= (i / 2)
 
 # uitvoer
-print(aantal_stappen)
+print(int(aantal_stappen))
