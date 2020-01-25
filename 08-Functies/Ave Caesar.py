@@ -14,13 +14,12 @@ def roteer_letter(letter, verschuiving):
             letter_nieuw = chr(ord('a') + (verschuiving - (ord('z') - ord(letter) + 1)))
         else:
             letter_nieuw = chr(ord(letter) + verschuiving)
-        return letter_nieuw
     elif ord('A') <= ord(letter) <= ord('Z'):
         if ord(letter) + verschuiving > ord('Z'):
             letter_nieuw = chr(ord('A') + (verschuiving - (ord('Z') - ord(letter) + 1)))
         else:
             letter_nieuw = chr(ord(letter) + verschuiving)
-        return letter_nieuw
+    return letter_nieuw
 
 
 
