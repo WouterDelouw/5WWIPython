@@ -24,3 +24,4 @@ def versleutel_zin(zin, verschuiving):
     return nieuwe_zin
 
 
+
