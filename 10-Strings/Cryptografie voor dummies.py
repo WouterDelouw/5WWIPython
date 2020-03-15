@@ -23,3 +23,4 @@ def versleutel_zin(zin, verschuiving):
             nieuwe_zin += '@'
     return nieuwe_zin
 
+
