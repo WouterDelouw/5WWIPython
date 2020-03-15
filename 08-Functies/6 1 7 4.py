@@ -27,28 +27,30 @@ def oplopende_cijfers(getal_1, getal_2, getal_3, getal_4):
 
 
 def op_af_getallen(cijfer_1, cijfer_2, cijfer_3, cijfer_4):
-    string_2 = str(cijfer_4) + str(cijfer_3) + str(cijfer_2) + str(cijfer_1)
     string_1 = str(cijfer_1) + str(cijfer_2) + str(cijfer_3) + str(cijfer_4)
+    string_2 = str(cijfer_4) + str(cijfer_3) + str(cijfer_2) + str(cijfer_1)
     return string_1, string_2
 
 
 
 
-def verschil(aflopend, oplopend):
-    uitkomst = int(aflopend) - int(oplopend)
-    ret = str(aflopend) + ' - ' + str(oplopend) + ' = ' +  str(uitkomst)
+def verschil(oplopend, aflopend):
+    uitkomst = int(oplopend) - int(aflopend)
     return str(uitkomst)
 
 
 
+def kaprekar(startgetal):
+    string = ''
+    while int(startgetal) != 6174:
+        splits_1, splits_2, splits_3, splits_4 = splits(startgetal)
+        splits_1, splits_2, splits_3, splits_4 = oplopende_cijfers(splits_1, splits_2, splits_3, splits_4)
+        aflopend_getal, oplopend_getal = op_af_getallen(splits_1, splits_2, splits_3, splits_4)
+        verschil_verschil = verschil(oplopend_getal, aflopend_getal)
+        startgetal = verschil_verschil
+        if int(verschil_verschil) != 6174:
+            string += str(oplopend_getal) + ' - ' + str(aflopend_getal) + ' = ' + verschil_verschil + '\n'
+        else:
+            string += str(oplopend_getal) + ' - ' + str(aflopend_getal) + ' = ' + verschil_verschil
 
-def kaprekar(begingetal):
-    while uitvoer != int(6174):
-        uitvoer = verschil(oplopende_cijfers(splits(begingetal)))
-        return (str(max(oplopende_cijfers(splits(begingetal)))) + ' - ' + (str(min(oplopende_cijfers(splits(begingetal)))) + ' = ' + str(uitvoer)
-        begingetal = 0
-        begingetal += uitvoer
-
-
-
-print(kaprekar(int(input('getal: '))))
+    return string
